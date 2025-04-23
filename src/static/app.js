@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           <p><strong>Participants:</strong> ${
             details.participants.length > 0
-              ? details.participants.join(", ")
+              ? details.participants.map(participant => `<span>${participant}</span>`).join("")
               : "No participants yet"
           }</p>
         `;
